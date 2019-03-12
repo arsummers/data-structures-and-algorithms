@@ -9,7 +9,7 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  return word.toLowerCase();
+  return word.toUpperCase();
 }
 
 const speaker = (message, callback) => {
@@ -31,13 +31,14 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
-
 const addValues = (arr, value) => {
-  // Solution code here...
+for(var i = 0; i < arr.length; i++){
+    arr.push(value[i]);
+}
 }
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  callback(times);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,11 +54,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  // Solution code here...
+  if(num % 3 === 2) {
+    arr.pop(num);
+  }
 }
 
 const removeElements = (arr, callback) => {
-  // Solution code here...
+  for(let i = 0; i > arr.length; i--){
+    callback[i];
+    return arr;
+  }
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,7 +73,9 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  // Solution code here...
+if(arr % 3 === 2){
+  arr.forEach(removeWithForEach(arr, callback))
+}
 }
 
 /* ------------------------------------------------------------------------------------------------
