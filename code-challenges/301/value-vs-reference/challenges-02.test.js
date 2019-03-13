@@ -66,8 +66,10 @@ console.log(people[1].isAuthor) prints true
 
 const setStatusAsAuthor = (people) => {
   // Solution code here...
+  people[0].isAuthor = true;
+  people[1].isAuthor = true;
+  people[2].isAuthor = true;
 }
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
