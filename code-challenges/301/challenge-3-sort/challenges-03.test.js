@@ -74,6 +74,9 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  arr.sort( (a, b) =>{
+    return a.price > b.price;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -86,6 +89,10 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
+  //I've repeated code from challenge 3. It looks like they might run off the same logic, but since I can't test properly I don't know.
+  arr.sort( (a, b) =>{
+    return arr[a].length > arr[b].length;
+  })
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -108,6 +115,9 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
+  arr.sort( (a, b) =>{
+    return a.this.lastName > b.this.lastName;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,6 +132,15 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => {
+    if (a.lastName !== b.lastName){
+      return a.lastName > b.lastName;
+    } else if (a.firstName !== b.firstName){
+      return a.firstName > b.firstName;
+    } else {
+      return a.age > b.age;
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
