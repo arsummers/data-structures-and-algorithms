@@ -8,7 +8,9 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 const sortBackwards = (arr) => {
   // Solution code here...
-  arr.sort()
+  arr.sort( (a, b) =>{
+    return a < b;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -23,6 +25,9 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
+  arr.sort( (a, b) =>{
+    return a > b;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,6 +38,10 @@ Write a function named sortByLength that takes in an array of strings and return
 
 const sortByLength = (arr) => {
   // Solution code here...
+  arr.sort( (a, b) =>{
+    return arr[a].length > arr[b].length;
+  }
+  )
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,6 +54,9 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
+  arr.sort( (a,b) =>{
+    return arr[a].toUpperCase < arr[b].toUpperCase;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
