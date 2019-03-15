@@ -40,6 +40,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  //Part of this is passing. Running into issues with San Diego and NYC
+  let regex = /[A-J]\w+/g;
+  return arr.toString().match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,6 +59,9 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  //produces Ovember. Receives all acceptable input. Other part of test not working.
+  let regex =/[O-o]\w+/g;
+  return input.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,6 +76,10 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   // Solution code here...
+  //regex pattern to find all the words that contain a space immediately at the end of the word
+  //return an array of those words, maintaining space at the end of the word
+  let regex = /[A-z]+\s/g;
+  return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
