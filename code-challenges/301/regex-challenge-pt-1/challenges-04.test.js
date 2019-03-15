@@ -76,8 +76,6 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   // Solution code here...
-  //regex pattern to find all the words that contain a space immediately at the end of the word
-  //return an array of those words, maintaining space at the end of the word
   let regex = /[A-z]+\s/g;
   return str.match(regex);
 };
@@ -96,6 +94,10 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
+  //remove vowels, replace with underscore
+
+  let regex =/[aeiou]/g;
+  return str.replace(regex, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
