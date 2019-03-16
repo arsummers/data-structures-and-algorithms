@@ -33,8 +33,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here... will use split
-  arr.split
-  //new_array.push(arr)
+  let gregor = arr.split('');
+  return gregor;
 };
 
 
