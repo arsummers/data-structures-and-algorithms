@@ -82,6 +82,9 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  //going to slice the first array of the object at 1
+  /*vanilla slice doesn't work. will need it to more or less treat each ingredient itself like an array.
+  Once it treats it like an array, it will need to return everything [2] and after. */
   return result;
 };
 
@@ -112,6 +115,7 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
+  //get rid of everything behind index[0] of the steps process
   return result;
 };
 
@@ -130,6 +134,7 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
+  //splice out evens? if arr[i] % 2 === 0, splice it
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,6 +154,7 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
+  //idk man loops?
 };
 
 
@@ -161,6 +167,7 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 const totalSumCSV = (str) => {
   let total = 0;
   // Solution code here...
+  //convert string to number, add it up - so, make string into array, add the bits of the array
   return total;
 };
 
@@ -175,6 +182,7 @@ For example, removeVowels('gregor') returns 'grgr'.
 
 const removeVowels = (str) => {
   // Solution code here...
+  //splice probably
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -189,6 +197,8 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 
 const extractVowels = (str) => {
   // Solution code here...
+  //get number 9 working first
+  //takes in string, returns array, so split and splice
 };
 
 /* ------------------------------------------------------------------------------------------------
