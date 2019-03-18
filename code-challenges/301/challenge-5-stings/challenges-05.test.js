@@ -84,7 +84,11 @@ const listFoods = (recipe) => {
   // Solution code here...
   //going to slice the first array of the object at 1
   /*vanilla slice doesn't work. will need it to more or less treat each ingredient itself like an array.
-  Once it treats it like an array, it will need to return everything [2] and after. */
+  Once it treats it like an array, it will need to return everything [2] and after. 
+  Having trouble getting this to work on an object*/
+
+  let newRecipe = recipe.slice(1);
+  result.push(newRecipe);
   return result;
 };
 
