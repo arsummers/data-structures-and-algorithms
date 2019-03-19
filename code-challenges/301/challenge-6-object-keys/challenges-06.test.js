@@ -83,13 +83,14 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  //I'm having trouble cracking into each object
-  // let properties = Object.values(arr);
-  // houses.push(properties);
+  //I would like to refactoring this into a forEach function, but I'm not sure how to get the syntax right for that.
+  //I tried using Object.values on this, but all I got was the number of objects inside the array
+  //this way works, but it doesn't feel entirely in line with what the challenge asks of me
+  //this is the most reliable way I could find of accessing parts of the object inside the array
   for(let i = 0; i < arr.length; i++){
     houses.push(arr[i].house);
-
   }
+
   return houses;
 };
 
@@ -107,6 +108,12 @@ hasChildrenValues(characters, 'Eddard') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  //use Object.values on children
+  let child_values = [];
+  Object.values(character).forEach(value =>{
+    child_values.push(value.children);
+  })
+  return child_values;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -119,6 +126,12 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+  let child_entries = [];
+  Object.entries(character).forEach(entry =>{
+    child_entries.push(entry.children);
+  })
+  return child_entries;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
