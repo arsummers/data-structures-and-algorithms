@@ -15,8 +15,6 @@ const getCourseKeys = (obj) => {
   // Solution code here...
   let properties = Object.keys(obj)
   return properties;
- 
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,6 +71,8 @@ let characters = [
 
 const totalCharacters = (arr) => {
   // Solution code here...
+  //returns number of characters in array - number of objects in the array
+  return arr.length;
 };
 
 /*------------------------------------------------------------------------------------------------
