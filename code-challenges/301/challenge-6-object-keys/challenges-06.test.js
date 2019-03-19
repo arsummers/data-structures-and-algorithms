@@ -71,7 +71,6 @@ let characters = [
 
 const totalCharacters = (arr) => {
   // Solution code here...
-  //returns number of characters in array - number of objects in the array
   return arr.length;
 };
 
@@ -84,6 +83,13 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  //I'm having trouble cracking into each object
+  // let properties = Object.values(arr);
+  // houses.push(properties);
+  for(let i = 0; i < arr.length; i++){
+    houses.push(arr[i].house);
+
+  }
   return houses;
 };
 
