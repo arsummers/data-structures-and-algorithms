@@ -13,13 +13,17 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getCourseKeys = (obj) => {
   // Solution code here...
+  let properties = Object.keys(obj)
+  return properties;
+ 
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 Use the characters data below for the remainder of the challenges.
 
-Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
+Write a function named totalCharacters that takes in  an array and returns the number of characters in the array.
 ------------------------------------------------------------------------------------------------ */
 
 let characters = [
