@@ -30,10 +30,12 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
+  let forEachSolution = [];
   arr.forEach(function(element){
     let forEachTwo = Math.pow(2, element);
-    return forEachTwo;
+    forEachSolution.push(forEachTwo);
   })
+  return forEachSolution;
 };
 
 /* ------------------------------------------------------------------------------------------------
