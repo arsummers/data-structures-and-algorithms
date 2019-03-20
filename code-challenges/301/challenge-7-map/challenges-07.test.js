@@ -17,7 +17,7 @@ const forLoopTwoToThe = (arr) => {
   let solutionForTwo = [];
   for(let i = 0; i < arr.length; i++){
     solutionForTwo.push(Math.pow(2, arr[i]));
-    console.log('chlg 1', solutionForTwo);
+    //console.log('chlg 1', solutionForTwo);
     return solutionForTwo;
   }
 };
@@ -31,9 +31,9 @@ Write a function named forEachTwoToThe that produces the same output as your for
 const forEachTwoToThe = (arr) => {
   // Solution code here...
   arr.forEach(function(element){
-    let twoForEach = arr.map(n => 2 * n);
+    return Math.pow(2, element);
     //console.log('two to the for each', twoForEach);
-    return twoForEach;
+    //return twoForEach;
   })
 };
 
@@ -48,6 +48,8 @@ const mapTwoToThe = (arr) => {
   //arr.map(2, i){
 //return 2 * i;
   //}
+  let mapTwo = arr.map( n => Math.pow(2, n));
+  return mapTwo;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,6 +64,7 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
+  //arr.map()
 };
 
 /* ------------------------------------------------------------------------------------------------
