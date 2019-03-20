@@ -12,6 +12,14 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
+  //This only pushes up one number. I'm not sure why. Does this regarless of
+  //whether or not I have my empty array where it is, or inside the for loop
+  let solutionForTwo = [];
+  for(let i = 0; i < arr.length; i++){
+    solutionForTwo.push(Math.pow(2, arr[i]));
+    console.log('chlg 1', solutionForTwo);
+    return solutionForTwo;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -22,6 +30,11 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
+  arr.forEach(function(element){
+    let twoForEach = arr.map(n => 2 * n);
+    //console.log('two to the for each', twoForEach);
+    return twoForEach;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +45,9 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
+  //arr.map(2, i){
+//return 2 * i;
+  //}
 };
 
 /* ------------------------------------------------------------------------------------------------
