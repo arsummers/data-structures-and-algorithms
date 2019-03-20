@@ -10,6 +10,7 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
 
+
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
   //This only pushes up one number. I'm not sure why. Does this regarless of
@@ -17,9 +18,8 @@ const forLoopTwoToThe = (arr) => {
   let solutionForTwo = [];
   for(let i = 0; i < arr.length; i++){
     solutionForTwo.push(Math.pow(2, arr[i]));
-    //console.log('chlg 1', solutionForTwo);
-    return solutionForTwo;
   }
+  return solutionForTwo;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,9 +31,8 @@ Write a function named forEachTwoToThe that produces the same output as your for
 const forEachTwoToThe = (arr) => {
   // Solution code here...
   arr.forEach(function(element){
-    return Math.pow(2, element);
-    //console.log('two to the for each', twoForEach);
-    //return twoForEach;
+    let forEachTwo = Math.pow(2, element);
+    return forEachTwo;
   })
 };
 
@@ -45,9 +44,6 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
-  //arr.map(2, i){
-//return 2 * i;
-  //}
   let mapTwo = arr.map( n => Math.pow(2, n));
   return mapTwo;
 };
@@ -64,7 +60,9 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
-  //arr.map()
+//close but not there
+  let mappedCharCode = arr.map( n => n.charCodeAt(n));
+  return mappedCharCode;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -79,6 +77,7 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   // Solution code here...
+  //if arr.map at n is % 2, push to evens array. Else, push too odds.
 };
 
 /* ------------------------------------------------------------------------------------------------
