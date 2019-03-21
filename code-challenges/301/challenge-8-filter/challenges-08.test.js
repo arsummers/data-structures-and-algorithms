@@ -99,7 +99,7 @@ const getBaseStatGreaterThan = (arr, minBaseStat) => {
   //return everything with a base stat bigger than the integer
   //close but not passing yet
   let biggerStat = arr.filter((val, idx)=>{
-    return !(val > minBaseStat);
+    return !(val.baseStat > minBaseStat);
   })
   return biggerStat;
 };
@@ -184,13 +184,11 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 
 const evenOddNumericValues = (arr) => {
   // Solution code here...
-  //removes non-numeric values, then uses map to generate string containing 'even' or 'odd'
-  //let workingArray = [];
   let noStrings = arr.filter((val, idx)=>{
     return !(typeof val === 'string');
   })
   noStrings;
-  console.log(noStrings);
+
   let evenOdds = noStrings.map(i => i % 2 === 0 ? 'even' : 'odd');
   return evenOdds;
 };
