@@ -53,7 +53,6 @@ const notInFirstArray = (forbiddenValues, arr) => {
     return !forbiddenValues.includes(val);
   })
   return allowedValues;
-  //needs all the elements inside 2nd array that are not in first - prevent duplicate
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,6 +96,12 @@ const snorlaxData = {
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
+  //return everything with a base stat bigger than the integer
+  //close but not passing yet
+  let biggerStat = arr.filter((val, idx)=>{
+    return !(val > minBaseStat);
+  })
+  return biggerStat;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,6 +114,7 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 
 const getStatName = (arr, minBaseStat) => {
   // Solution code here...
+  //return the stat not the entire object. Will need to get challegne 4 running to extend
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,6 +168,10 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+  let childFree = arr.filter((val)=>{
+    return !val.children;
+  })
+  return childFree;
 };
 
 /* ------------------------------------------------------------------------------------------------
