@@ -36,14 +36,6 @@ const filterStringsWithVowels = (arr) => {
   }
   )
   return stringsWithVowels;
-  // ;//something with vowels
-  // let stringsWithVowels = arr.filter(function (val, idx){
-  //   //if the string does not contain what I put into regex
-
-  // })
-  // return stringsWithVowels;
-
-
 };
 
 
@@ -57,6 +49,11 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  let allowedValues = arr.filter((val)=>{
+    return !forbiddenValues.includes(val);
+  })
+  return allowedValues;
+  //needs all the elements inside 2nd array that are not in first - prevent duplicate
 };
 
 /* ------------------------------------------------------------------------------------------------
