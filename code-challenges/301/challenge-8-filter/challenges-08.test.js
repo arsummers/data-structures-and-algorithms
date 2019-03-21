@@ -10,6 +10,14 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  //arr.filter(
+  //if item in arr%2, filter, else return
+  // )
+
+  let odds = arr.filter(function (val, idx) {
+    return (val % 2);
+  })
+  return odds;
 };
 
 /* ------------------------------------------------------------------------------------------------
