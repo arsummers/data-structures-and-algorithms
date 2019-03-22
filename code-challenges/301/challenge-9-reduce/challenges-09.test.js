@@ -151,19 +151,12 @@ const countNumberOfChildren = (arr) => {
   // Solution code here...
   //get total number of children in array - each set of children exists in their own array
   return arr.reduce((acc, val)=>{
-    //return each index of each child
-    console.log(acc)
-    console.log(Array(val.children))
-    //acc[val.children[idx]] = val.children[idx];
-    //val.children >= 1 ? acc+= countNumberOfElements(val.children) : console.log('no kids');
     if(val.children){
       acc+= countNumberOfElements(val.children);
     }
     return acc;
-
   }, 0);
 };
-console.log(countNumberOfChildren(characters));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -198,6 +191,12 @@ const isPrime = (value) => {
 
 const countPrimeNumbers = (arr) => {
   // Solution code here...
+  //not working yet
+  arr.reduce((acc)=>{
+    if (isPrime()){
+      acc++;
+    }
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
