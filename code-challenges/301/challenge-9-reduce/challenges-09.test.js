@@ -10,6 +10,11 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  return arr.reduce((accumulator)=>{
+    accumulator++;
+    return accumulator;
+  }, 0);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,6 +75,14 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  //reduce to return character names
+
+  let characters = arr.reduce((accumulator, value, idx) => {
+    accumulator[value.name] = value.name;
+    //something.push
+    return accumulator;
+  }, 0)
+  //return characters;
 };
 
 /* ------------------------------------------------------------------------------------------------
