@@ -75,15 +75,14 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-  //reduce to return character names
-
-  let characters = arr.reduce((accumulator, value, idx) => {
-    accumulator[value.name] = value.name;
-    //something.push
+  //let characterArray = [];
+  return arr.reduce((accumulator, value) => {
+    //accumulator[value.name] = value.name;
+    accumulator.push(value.name);
     return accumulator;
-  }, 0)
-  //return characters;
+  }, [])
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
