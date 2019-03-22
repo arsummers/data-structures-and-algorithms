@@ -14,7 +14,6 @@ const countNumberOfElements = (arr) => {
     accumulator++;
     return accumulator;
   }, 0);
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,14 +93,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
-console.log(str)
-let newarray = str.split('');
+  let newarray = str.split('');
   return newarray.reduce((newString, letter)=>{
     return letter + newString;
   }, '');
-  //return reversedArray;
 };
-//console.log(reversedString('heeee'))
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -153,7 +149,21 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  //get total number of children in array - each set of children exists in their own array
+  return arr.reduce((acc, val)=>{
+    //return each index of each child
+    console.log(acc)
+    console.log(Array(val.children))
+    //acc[val.children[idx]] = val.children[idx];
+    //val.children >= 1 ? acc+= countNumberOfElements(val.children) : console.log('no kids');
+    if(val.children){
+      acc+= countNumberOfElements(val.children);
+    }
+    return acc;
+
+  }, 0);
 };
+console.log(countNumberOfChildren(characters));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -165,7 +175,9 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
+
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
