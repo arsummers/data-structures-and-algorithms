@@ -92,10 +92,16 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => {
+const reversedString = (str) => {
   // Solution code here...
+console.log(str)
+let newarray = str.split('');
+  return newarray.reduce((newString, letter)=>{
+    return letter + newString;
+  }, '');
+  //return reversedArray;
 };
-
+//console.log(reversedString('heeee'))
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
