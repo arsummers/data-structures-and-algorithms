@@ -36,6 +36,13 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+
+  let arrSum = function(input){
+    return input.reduce(function(a,b){
+      return a + b
+    }, 0);
+  }
+  return input;
 };
 
 /* ------------------------------------------------------------------------------------------------
