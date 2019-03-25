@@ -36,13 +36,17 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  // then reduce the array it produces
+  //track total per array, iterate over master array
 
-  let arrSum = function(input){
-    return input.reduce(function(a,b){
-      return a + b
-    }, 0);
-  }
-  return input;
+  let total = 0;
+
+  input.forEach(arr => {
+    total += arr.reduce((acc, val)=>{
+      return acc += val;
+    }, 0)
+  })
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,6 +63,9 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  //input is array of arrays
+  //remove all elements that are not typeOf number or %5 === 0
+  //take the resulting arr, Math.pow(2, results), return an array of arrays
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,6 +132,8 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  //return names of characters with genders
+  //combine characters into single string with names separated by 'and'
 };
 
 /* ------------------------------------------------------------------------------------------------
