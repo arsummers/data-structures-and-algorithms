@@ -41,14 +41,23 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  /* This feels super ineffecient and I kind of hate it, but it works. What would be a more elegant way to solve
+  this challenge?
+  I tried refactoring into:
+
+    arr.forEach((element, idx)=>{
+    arr[idx].replace('(' , '' && ')', '' && '-', '')
+    result.push(arr[idx].replace('(', ''));
+  })
+
+  but only it only successfully replace the '('
+  */
   let result = [];
   let resultNoOpenParen = [];
   let resultNoCloseParen = [];
   let resultNoSpace = [];
   arr.forEach((element, idx)=>{
     arr[idx].replace('(', '')
-    // arr[idx].replace('-', '')
     resultNoOpenParen.push(arr[idx].replace('(', ''));
   })
 
@@ -63,6 +72,7 @@ const standardizePhoneNumbers = (arr) => {
   resultNoSpace.forEach((element, idx)=>{
     result.push(resultNoSpace[idx].replace('-', ''))
   })
+
   return result;
 };
 
@@ -75,7 +85,13 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+//needs to return indices where  idx % 2 === 0
+
+  for(let i = 0; i < str.length; i++){
+    if (i % 2 === 0){
+      return str.charAt(i)
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -86,6 +102,8 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let word = ':)';
+  return arr.includes(word) ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
