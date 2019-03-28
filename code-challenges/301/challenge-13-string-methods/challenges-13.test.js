@@ -23,6 +23,15 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  let word = ':)';
+  let result =[];
+  arr.forEach((element, idx)=>{
+    if(arr[idx].includes(word)){
+      result.push(element);
+    }
+  })
+  return result;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
