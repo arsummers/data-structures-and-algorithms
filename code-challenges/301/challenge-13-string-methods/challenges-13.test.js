@@ -26,9 +26,7 @@ const findHappiness = (arr) => {
   let word = ':)';
   let result =[];
   arr.forEach((element, idx)=>{
-    if(arr[idx].includes(word)){
-      result.push(element);
-    }
+    arr[idx].includes(word) ? result.push(element) : null;
   })
   return result;
 
@@ -44,6 +42,28 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  let result = [];
+  let resultNoOpenParen = [];
+  let resultNoCloseParen = [];
+  let resultNoSpace = [];
+  arr.forEach((element, idx)=>{
+    arr[idx].replace('(', '')
+    // arr[idx].replace('-', '')
+    resultNoOpenParen.push(arr[idx].replace('(', ''));
+  })
+
+  resultNoOpenParen.forEach((element, idx)=>{
+    resultNoCloseParen.push(resultNoOpenParen[idx].replace(')', ''))
+  })
+
+  resultNoCloseParen.forEach((element, idx)=>{
+    resultNoSpace.push(resultNoCloseParen[idx].replace(' ', ''))
+  })
+
+  resultNoSpace.forEach((element, idx)=>{
+    result.push(resultNoSpace[idx].replace('-', ''))
+  })
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
