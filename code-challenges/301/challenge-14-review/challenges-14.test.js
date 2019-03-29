@@ -11,10 +11,10 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 const toTitleCase = (arr) => {
   // Solution code here...
 //take the char at, replace with something toUpperCase
-  arr.forEach(element=>{
-    element.charAt(0);
+  return arr.map((element)=>{
+    return element.replace(element.charAt(0), element.charAt(0).toUpperCase());
   }
-  )
+  );
 
 };
 
@@ -92,6 +92,13 @@ let starWarsData = [{
 let biggerThanLuke = (arr) => {
   // Solution code here...
 //if the index of the array is bigger than 77, take the name and add to the string.
+  let charArr = [];
+  arr.forEarch((char, idx) => {
+    if (char[idx].mass > 77) {
+      charArr.push(char);
+    }
+    return charArr;
+  })
 
 };
 
@@ -112,7 +119,7 @@ This data could be sorted by name or price.
 const sortBy = (property, arr) => {
   // Solution code here...
 
-  return arr.sort();
+  return arr.sort(property.name);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,6 +136,7 @@ https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
 // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
