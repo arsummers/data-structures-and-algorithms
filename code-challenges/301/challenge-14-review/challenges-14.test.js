@@ -10,6 +10,12 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 
 const toTitleCase = (arr) => {
   // Solution code here...
+//take the char at, replace with something toUpperCase
+  arr.forEach(element=>{
+    element.charAt(0);
+  }
+  )
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,6 +91,8 @@ let starWarsData = [{
 
 let biggerThanLuke = (arr) => {
   // Solution code here...
+//if the index of the array is bigger than 77, take the name and add to the string.
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,6 +111,8 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
+
+  return arr.sort();
 };
 
 /* ------------------------------------------------------------------------------------------------
