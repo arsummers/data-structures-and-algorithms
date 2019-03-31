@@ -25,9 +25,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-  arr.sort( (a, b) =>{
-    return a > b;
-  })
+  return arr.sort();
 };
 
 /* ------------------------------------------------------------------------------------------------
