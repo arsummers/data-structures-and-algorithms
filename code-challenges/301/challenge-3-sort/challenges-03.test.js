@@ -87,10 +87,20 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
-  //I've repeated code from challenge 3. It looks like they might run off the same logic, but since I can't test properly I don't know.
-  arr.sort( (a, b) =>{
-    return arr[a].length > arr[b].length;
+  let newArr = [];
+  let numArr =[];
+  arr.forEach(element => {
+    newArr.push(element.toString())
+  });
+  newArr.sort((a, b)=>{
+    return a.length - b.length;
+  });
+
+  newArr.forEach(element =>{
+    numArr.push(Number(element))
   })
+
+  return numArr;
 };
 
 /*-----------------------------------------------------------------------------------------------
