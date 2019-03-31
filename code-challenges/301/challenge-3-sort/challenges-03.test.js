@@ -49,6 +49,7 @@ Write a function named alphabetizeBetter that takes in an array of strings and r
 For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, and so is ['alphabet', 'Alphabet', 'carrot', 'Zebra'].
 ------------------------------------------------------------------------------------------------ */
 
+//I tried using toLowerCase  method to sort, but for whatever reason, it didn't sort 'alert' properly.
 const alphabetizeBetter = (arr) => {
   // Solution code here...
   return arr.sort((a, b)=>{
@@ -71,8 +72,8 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  arr.sort( (a, b) =>{
-    return a.price > b.price;
+  return arr.sort( (a, b) =>{
+    return a.price - b.price;
   })
 };
 
