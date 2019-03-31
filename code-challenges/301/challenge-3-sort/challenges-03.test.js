@@ -25,9 +25,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-  arr.sort( (a, b) =>{
-    return a > b;
-  })
+  return arr.sort();
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,10 +36,9 @@ Write a function named sortByLength that takes in an array of strings and return
 
 const sortByLength = (arr) => {
   // Solution code here...
-  arr.sort( (a, b) =>{
-    return arr[a].length > arr[b].length;
-  }
-  )
+  return arr.sort((a, b)=>{
+    return a.length - b.length;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,10 +49,11 @@ Write a function named alphabetizeBetter that takes in an array of strings and r
 For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, and so is ['alphabet', 'Alphabet', 'carrot', 'Zebra'].
 ------------------------------------------------------------------------------------------------ */
 
+//I tried using toLowerCase  method to sort, but for whatever reason, it didn't sort 'alert' properly.
 const alphabetizeBetter = (arr) => {
   // Solution code here...
-  arr.sort( (a,b) =>{
-    return arr[a].toUpperCase < arr[b].toUpperCase;
+  return arr.sort((a, b)=>{
+    return a.localeCompare(b);
   })
 };
 
@@ -74,8 +72,8 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  arr.sort( (a, b) =>{
-    return a.price > b.price;
+  return arr.sort( (a, b) =>{
+    return a.price - b.price;
   })
 };
 
@@ -89,10 +87,20 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
-  //I've repeated code from challenge 3. It looks like they might run off the same logic, but since I can't test properly I don't know.
-  arr.sort( (a, b) =>{
-    return arr[a].length > arr[b].length;
+  let newArr = [];
+  let numArr =[];
+  arr.forEach(element => {
+    newArr.push(element.toString())
+  });
+  newArr.sort((a, b)=>{
+    return a.length - b.length;
+  });
+
+  newArr.forEach(element =>{
+    numArr.push(Number(element))
   })
+
+  return numArr;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -115,9 +123,9 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
-  arr.sort( (a, b) =>{
-    return a.this.lastName > b.this.lastName;
-  })
+  return arr.sort((a, b)=>{
+    return a.lastName - b.lastName;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
