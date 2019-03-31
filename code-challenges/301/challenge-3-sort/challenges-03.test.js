@@ -51,8 +51,8 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
-  arr.sort( (a,b) =>{
-    return arr[a].toUpperCase < arr[b].toUpperCase;
+  return arr.sort((a, b)=>{
+    return a.localeCompare(b);
   })
 };
 
